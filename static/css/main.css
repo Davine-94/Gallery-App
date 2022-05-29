@@ -1,3 +1,19 @@
-h1 {
-    color: green;
+#logo-main{
+    display: block;
+    margin: 20px auto;
+}
+.nav-item{
+    display: inline-block;
+    float: none;
+    padding:30px;
+}    
+.navbar{
+    height:15vh;
+} 
+.navbar-brand{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 60px;
+    font-style: italic;
+    font-weight: bold;
+    color:rgb(219, 206, 206);
 }
