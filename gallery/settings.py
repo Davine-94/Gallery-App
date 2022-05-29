@@ -90,6 +90,11 @@ DATABASES = {
 }
 
 # adding config
+cloudinary.config(
+    cloud_name = "dji5hqftc",
+    api_key = "883113743287453",
+    api_secret = "1hrPlXx8MeAPi7Lxq1B-49VQouc"
+)
 
 
 # Password validationy
