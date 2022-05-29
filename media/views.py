@@ -11,16 +11,27 @@ def gallery(request):
         images = Image.objects.all()
     except ObjectDoesNotExist:
         raise Http404()
-    return render(request, 'gallery.html', {'images': images, 'locations':locations, 'categories': categories})
+    return render(request, 'media/gallery.html', {'images': images, 'locations':locations, 'categories': categories})
+
 def search_images(request):
     if 'image' in request.GET and request.GET['image']:
         search_term = request.GET('image')
         searched_images = Image.search_by_name(search_term)
         message = f'{search_term}'
-        return render(request, 'search.html', {'message': message, 'images': searched_images})
+        return render(request, 'media/search.html', {'message': message, 'images': searched_images})
     else:
         message = "You have not searched for any term"
-        return render(request, 'search.html', {'message': message})
-def home(request):
-    
-    return render(request, 'media/home.html')
+        return render(request, 'media/search.html', {'message': message})
+
+def view_category(request, category):
+    categories = Image.objects.distinct().values_list('category__name', flat=True)
+    locations = Image.objects.distinct().values_list('location__name', flat=True)
+    image = Image.objects.filter(category__name=category)
+    return render(request, 'media/category.html', {'image': image,'categories': categories,'locations': locations})
+
+def view_location(request, location):
+    locations = Image.objects.distinct().values_list('location__name', flat=True)
+    categories = Image.objects.distinct().values_list('category__name', flat=True)
+    image = Image.objects.filter(location__name=location)
+    return render(request, 'media/category.html', {'image': image, 'categories': categories, 'locations': locations})
+
