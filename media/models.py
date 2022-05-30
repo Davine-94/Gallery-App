@@ -35,6 +35,19 @@ class Image(models.Model):
     category = models.ManyToManyField(Category)
     post_time = models.DateTimeField(auto_now_add=True)
     
+    class Meta:
+        ordering = ['-post_time']
+
+    def __str__(self):
+        return self.name
+
+    def save_image(self):
+        self.save()
+
+    def delete_image(self):
+        self.delete()
+
+    
     @classmethod
     def get_image_by_id(cls, id):
         image = cls.objects.filter(id__icontains=id)

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,8 +7,8 @@
     <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' >
   </head>
   <body>
-    <header role="banner">
-    <img id="logo-main" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/32877/logo-thing.png" width="200" alt="Logo Thing main logo">
+    {% comment %} <header role="banner"> {% endcomment %}
+    {% comment %} <img id="logo-main" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/32877/logo-thing.png" width="200" alt="Logo Thing main logo"> {% endcomment %}
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" height="40vh" role="navigation">
         <div class="container-fluid">
             <a class="navbar-brand" href="{%url 'gallery'%}">Related Classics</a>
@@ -88,4 +89,6 @@
         </form>
         </div>
     </nav>
-    </header>
+    {% comment %} </header> {% endcomment %}
+  </body>
+  </html>
