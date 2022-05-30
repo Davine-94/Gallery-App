@@ -11,7 +11,7 @@ def gallery(request):
         images = Image.objects.all()
     except ObjectDoesNotExist:
         raise Http404()
-    return render(request, 'media/gallery.html', {'images': images, 'locations':locations, 'categories': categories})
+    return render(request, 'media/gallery.html', {'image': images, 'locations':locations, 'categories': categories})
 
 def search_images(request):
     if 'image' in request.GET and request.GET['image']:

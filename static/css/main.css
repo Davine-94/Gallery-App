@@ -1,6 +1,7 @@
 #logo-main{
     display: block;
-    margin: 20px auto;
+    margin: 30px auto;
+
 }
 .nav-item{
     display: inline-block;
@@ -17,3 +18,43 @@
     font-weight: bold;
     color:rgb(219, 206, 206);
 }
+img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+  }
+  .col {
+    margin: 10px 0;
+    position: relative;
+  }
+  
+  .overlay {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    background: rgba(39, 42, 43, 0.5);
+    transition: opacity 200ms ease-in-out;
+    border-radius: 10px;
+    /* margin: -15px 0 0 -15px; */
+    cursor: zoom-in;
+    width: 92.5%;
+    height: 100%;
+    color: #ffffff;
+    padding: 20px;
+  }
+  
+  .overlay:hover {
+    opacity: 1;
+  }
+  
+  .modal-dialog {
+    margin: 0;
+  }
+  
+  .modal {
+    left: 0;
+  }
+  

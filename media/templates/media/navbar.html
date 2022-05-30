@@ -73,6 +73,19 @@
                 </ul>
               </li>
             </ul>
+        <form
+            role="search"
+            action="{% url 'search_images' %}"
+            class="d-flex navbar-form">
+            <input
+            type="search"
+            class="form-control me-2"
+            placeholder="Search Images"
+            name="image"/>
+            <button class="btn btn-outline-success" type="submit">
+            Search
+            </button>
+        </form>
         </div>
     </nav>
     </header>
