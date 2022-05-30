@@ -7,11 +7,11 @@
     <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' >
   </head>
   <body>
-    {% comment %} <header role="banner"> {% endcomment %}
-    {% comment %} <img id="logo-main" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/32877/logo-thing.png" width="200" alt="Logo Thing main logo"> {% endcomment %}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" height="40vh" role="navigation">
+   <header role="banner"> 
+  {% comment %} <img id="logo-main" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/32877/logo-thing.png" width="200" alt="Logo Thing main logo">  {% endcomment %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{%url 'gallery'%}">Related Classics</a>
+            <a class="navbar-brand fs-3" href="{%url 'gallery'%}">Related Classics</a>
             <div class="navbar-header">
              <button
             class="navbar-toggler"
@@ -89,6 +89,6 @@
         </form>
         </div>
     </nav>
-    {% comment %} </header> {% endcomment %}
+   </header> 
   </body>
   </html>
